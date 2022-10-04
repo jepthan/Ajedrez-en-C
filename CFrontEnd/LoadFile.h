@@ -5,6 +5,6 @@ typedef struct File
 {
 	const char* filename;
 	FILE* Archivo;
-};
-bool leerArchivo(File* Archivo);
-bool HacerArchivo(File* Archivo);
+}File;
+int leerArchivo(File* Archivo);
+int HacerArchivo(File* Archivo);

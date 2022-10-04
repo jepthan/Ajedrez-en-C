@@ -1,24 +1,24 @@
 #include "LoadFile.h"
 
-bool leerArchivo(File* Archivo) {
+int leerArchivo(File* Archivo) {
 	Archivo->Archivo = fopen(Archivo->filename, "r");
 	if (Archivo->Archivo) {
-		return true;
+		return 1;
 	}
 	else {
-		return false;
+		return 0;
 	}
 }
-bool HacerArchivo(File* Archivo) {
+int HacerArchivo(File* Archivo) {
 	Archivo->Archivo = fopen(Archivo->filename, "w");
 	if (Archivo->Archivo) {
-		return true;
+		return 1;
 	}
 	else {
-		return false;
+		return 0;
 	}
 }
 
-bool LoadMovements(File *Archivo) {
+int LoadMovements(File *Archivo) {
 
 }
