@@ -4,7 +4,7 @@ typedef struct Vec2 {
 	float x;
 	float y;
 	
-};
+}Vec2;
 
 typedef struct Vec3 {
 	float x;
@@ -20,7 +20,7 @@ Vec2(float _x, float _y) {
 	x = _x;
 	y = _y;
 }
-*/
+
 /*Dreams
 Vec3(){}
 	Vec3(float _x, float _y, float _z){
