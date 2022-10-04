@@ -1,8 +1,9 @@
 #include "LoadFile.h"
 
 int leerArchivo(File* Archivo) {
-	Archivo->Archivo = fopen(Archivo->filename, "r");
-	if (Archivo->Archivo) {
+	int error_code;
+	error_code = fopen_s(Archivo->Archivo,Archivo->filename, "r");
+	if (error_code != 0 ){
 		return 1;
 	}
 	else {
@@ -10,7 +11,7 @@ int leerArchivo(File* Archivo) {
 	}
 }
 int HacerArchivo(File* Archivo) {
-	Archivo->Archivo = fopen(Archivo->filename, "w");
+	fopen_s(Archivo->Archivo,Archivo->filename, "w");
 	if (Archivo->Archivo) {
 		return 1;
 	}

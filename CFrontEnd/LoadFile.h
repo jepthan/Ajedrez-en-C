@@ -5,7 +5,7 @@
 typedef struct File
 {
 	const char* filename;
-	FILE* Archivo;
+	FILE** Archivo;
 }File;
 int leerArchivo(File* Archivo);
 int HacerArchivo(File* Archivo);
