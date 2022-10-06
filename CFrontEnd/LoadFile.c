@@ -20,14 +20,22 @@ int HacerArchivo(File* Archivo) {
 	}
 }
 
-int LoadMovements(File *Archivo) {
+int LoadMovements(File *Archivo, Vec2 Movimientos[64]) {
 	
 	int location = 0;
 	if (leerArchivo(Archivo)) {
-		int a;
-		while (location != EOF) {
-			location = fscanf_s(Archivo->Archivo, "%i", &a, location);
-			printf("%i\n", a);
+		int i = 0;
+		int j = 0;
+		while (location != EOF && i<64) {
+			if (j % 2 == 0) {
+				location = fscanf_s(Archivo->Archivo, "%f", &Movimientos[i].x);
+			}
+			else {
+				location = fscanf_s(Archivo->Archivo, "%f", &Movimientos[i].y);
+				printf("%f , %f\n", Movimientos[i].x, Movimientos[i].y);
+				i++;
+			}
+			j++;
 		}
 		
 	}
