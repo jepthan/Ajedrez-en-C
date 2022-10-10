@@ -9,4 +9,4 @@ typedef struct File
 }File;
 int leerArchivo(File* Archivo);
 int HacerArchivo(File* Archivo);
-int LoadMovements(File* Archivo);
+int LoadMovements(File* Archivo, Vec2 Movimientos[64]);
