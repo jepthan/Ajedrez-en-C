@@ -6,14 +6,14 @@
 int main() {
 
 	Ventana app;
-	app.height = 480;
-	app.width = 480;
+	app.height = 720;
+	app.width = 1080;
 	app.Titulo = "C FrontEnd";
 	iniciarVentana(&app);
 
 	while (!glfwWindowShouldClose(app.window)) {
 
-		glClearColor(0, 0, 0, 1);
+		glClearColor(0.5, 0, 0.7, 1);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 
