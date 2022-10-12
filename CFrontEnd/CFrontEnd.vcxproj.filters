@@ -21,12 +21,18 @@
     <ClCompile Include="Ventana.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Casilla.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vec.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Ventana.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Casilla.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

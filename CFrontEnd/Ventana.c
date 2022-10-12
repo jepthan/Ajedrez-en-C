@@ -5,7 +5,7 @@ void iniciarVentana(Ventana *interfaz) {
 		printf("error al iniciar pantalla\n");
 	}
 	interfaz->window = glfwCreateWindow(interfaz->width, interfaz->height, interfaz->Titulo, NULL, NULL);
-	if (interfaz->window)
+	if (interfaz->window == NULL)
 	{
 		printf("Error al iniciar window");
 	}
