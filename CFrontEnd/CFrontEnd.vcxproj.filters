@@ -35,5 +35,13 @@
     <ClInclude Include="Casilla.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClCompile Include="LoadFile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LoadFile.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

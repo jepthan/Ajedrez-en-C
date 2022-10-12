@@ -150,6 +150,9 @@ copy "$(Projectdir)Dependencias\glfw-3.3.8.bin.WIN64\lib-vc2022\glfw3.dll" "$(ou
     <ClInclude Include="Vec.h" />
     <ClInclude Include="Ventana.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LoadFile.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
