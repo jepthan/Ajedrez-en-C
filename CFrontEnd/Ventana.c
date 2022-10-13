@@ -26,6 +26,8 @@ void framebuffer_size_callback(GLFWwindow* window, int _width, int _height) {
 
 	glViewport(0, 0, _width, _height);
 	glfwGetFramebufferSize(window, &_width, &_height);
+	printf("%d ", _width);
+	printf("  %d", _height);
 }
 void error_callback(int error, const char* description) {
 	fprintf(stderr, "Error: %s\n", description);
@@ -36,6 +38,7 @@ void GlConfig() {
 	const char* glsl_version = "#version 130";
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
+	glfwWindowHint(GLFW_MAXIMIZED, GL_TRUE);
 	
 
 }

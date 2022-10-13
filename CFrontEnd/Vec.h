@@ -1,5 +1,8 @@
 #ifndef _Vec_H
 #define _Vec_H
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include "Ventana.h"
 typedef struct Vec2 {
 	float x;
 	float y;
@@ -18,8 +21,8 @@ typedef struct Mat4 {
 
 Mat4 TransformMatrixP3(Vec3 positon);
 Mat4 TransformMatrixP2(Vec2 positon);
-Mat4 OrthoMatrix();
-
+Mat4 OrthoMatrix(Ventana oVentana);
+Mat4 ScaleMat(float uniform);
 /* dreams
 Vec2() {}
 Vec2(float _x, float _y) {

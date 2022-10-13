@@ -63,10 +63,24 @@ void CreateShader(Shader* oShader) {
 void UseShader(Shader oShader) {
 	glUseProgram(oShader.ID);
 }
-void AddMat4(Shader oShader, Mat4 Matrix) {
+void AddMat4PR(Shader oShader, Mat4 Matrix) {
+
+	UseShader(oShader);
+	GLuint matrixID = glGetUniformLocation(oShader.ID, "projection");
+
+	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &Matrix.matrix[0][0]);
+}
+void AddMat4TR(Shader oShader, Mat4 Matrix) {
 
 	UseShader(oShader);
 	GLuint matrixID = glGetUniformLocation(oShader.ID, "Transform");
+
+	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &Matrix.matrix[0][0]);
+}
+void AddMat4SC(Shader oShader, Mat4 Matrix) {
+
+	UseShader(oShader);
+	GLuint matrixID = glGetUniformLocation(oShader.ID, "scale");
 
 	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &Matrix.matrix[0][0]);
 }

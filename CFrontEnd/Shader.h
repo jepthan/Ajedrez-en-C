@@ -15,5 +15,7 @@ void initShader(Shader *oShader);
 void CopileShader(Shader* oShader);
 void CreateShader(Shader* oShader);
 void UseShader(Shader oShader);
-void AddMat4(Shader oShader, Mat4 Matrix);
+void AddMat4PR(Shader oShader, Mat4 Matrix);
+void AddMat4TR(Shader oShader, Mat4 Matrix);
+void AddMat4SC(Shader oShader, Mat4 Matrix);
 #endif // !SHADER_H

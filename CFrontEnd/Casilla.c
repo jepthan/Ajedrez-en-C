@@ -47,7 +47,16 @@ void initCasilla(Casilla* oCasilla, Shader oShader) {
 	oCasilla->Posicion.y = 0;
 	oCasilla->oShader = oShader;
 }
-void pintar(Casilla oCasilla) {
+void pintar(Casilla oCasilla, Ventana app) {
+
+	Mat4 projection = OrthoMatrix(app);
+	Mat4 scale = ScaleMat(0.15f);
+	Mat4 Transfom = TransformMatrixP2(oCasilla.Posicion);
+
+	AddMat4PR(oCasilla.oShader, projection);
+	AddMat4TR(oCasilla.oShader, Transfom);
+	AddMat4SC(oCasilla.oShader, scale);
+
 
 	UseShader(oCasilla.oShader);
 	glBindVertexArray(oCasilla.VAO);

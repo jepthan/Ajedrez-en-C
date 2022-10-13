@@ -5,6 +5,7 @@
 #include "Vec.h"
 #include "Vertex.h"
 #include "Shader.h"
+
 typedef struct Casilla {
 	unsigned int VAO;
 	Vec2 Posicion;
@@ -13,6 +14,6 @@ typedef struct Casilla {
 
 }Casilla;
 void initCasilla(Casilla* oCasilla, Shader oShader);
-void pintar(Casilla oCasilla);
+void pintar(Casilla oCasilla, Ventana app);
 
 #endif // !CASILLAS_H
