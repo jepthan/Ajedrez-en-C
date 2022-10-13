@@ -13,6 +13,8 @@ typedef struct Ventana {
 void iniciarVentana(Ventana *interfaz);
 
 void GlConfig();
+void framebuffer_size_callback(GLFWwindow* window, int _width, int _height);
+void error_callback(int error, const char* description);
 
 
 #endif

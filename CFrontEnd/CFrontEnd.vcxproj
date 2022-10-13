@@ -142,16 +142,27 @@ copy "$(Projectdir)Dependencias\glfw-3.3.8.bin.WIN64\lib-vc2022\glfw3.dll" "$(ou
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Casilla.c" />
+    <ClCompile Include="LoadFile.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="Shader.c" />
+    <ClCompile Include="Vec.c" />
     <ClCompile Include="Ventana.c" />
+    <ClCompile Include="Vertex.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Casilla.h" />
+    <ClInclude Include="Shader.h" />
     <ClInclude Include="Vec.h" />
     <ClInclude Include="Ventana.h" />
+    <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LoadFile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Fragment.txt" />
+    <Text Include="hola.txt" />
+    <Text Include="Vertex.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

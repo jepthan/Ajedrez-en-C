@@ -24,6 +24,18 @@
     <ClCompile Include="Casilla.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Vertex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadFile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vec.h">
@@ -35,13 +47,25 @@
     <ClInclude Include="Casilla.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClCompile Include="LoadFile.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="Vertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LoadFile.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
+    <Text Include="hola.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Vertex.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Fragment.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

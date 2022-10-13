@@ -12,6 +12,13 @@ typedef struct Vec3 {
 	float z;
 }Vec3;
 
+typedef struct Mat4 {
+	float matrix[4][4];
+}Mat4;
+
+Mat4 TransformMatrixP3(Vec3 positon);
+Mat4 TransformMatrixP2(Vec2 positon);
+Mat4 OrthoMatrix();
 
 /* dreams
 Vec2() {}

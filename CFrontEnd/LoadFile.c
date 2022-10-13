@@ -41,3 +41,24 @@ int LoadMovements(File *Archivo, Vec2 Movimientos[64]) {
 	}
 	return 1;
 }
+char * LoadShader(File* Archivo) {
+	
+	if (leerArchivo(Archivo)) {
+		char* text;
+		fseek(Archivo->Archivo, 0, SEEK_END);
+		int len = ftell(Archivo->Archivo);
+		rewind(Archivo->Archivo);
+		
+		text = (char*) malloc(sizeof(char) * len + 1);
+
+		if (text) {
+			int a = fread(text, sizeof(char), len, Archivo->Archivo);
+			text[a] = '\0';
+			printf("%s", text);
+			return text;
+		}
+		
+	}
+
+	return NULL;
+}
