@@ -145,6 +145,7 @@ copy "$(Projectdir)Dependencias\glfw-3.3.8.bin.WIN64\lib-vc2022\glfw3.dll" "$(ou
     <ClCompile Include="LoadFile.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="Shader.c" />
+    <ClCompile Include="stb_image.c" />
     <ClCompile Include="Vec.c" />
     <ClCompile Include="Ventana.c" />
     <ClCompile Include="Vertex.c" />
@@ -152,6 +153,7 @@ copy "$(Projectdir)Dependencias\glfw-3.3.8.bin.WIN64\lib-vc2022\glfw3.dll" "$(ou
   <ItemGroup>
     <ClInclude Include="Casilla.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="stb_image.h" />
     <ClInclude Include="Vec.h" />
     <ClInclude Include="Ventana.h" />
     <ClInclude Include="Vertex.h" />

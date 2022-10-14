@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CFrontEnd", "CFrontEnd\CFrontEnd.vcxproj", "{225F1518-9FE1-43C9-A75E-553591895A39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpFrontEnd", "CSharpFrontEnd\CSharpFrontEnd.csproj", "{3BD9A65A-EA4C-4689-A8D6-5A1F968CBAAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpFrontEnd", "CSharpFrontEnd\CSharpFrontEnd.csproj", "{3BD9A65A-EA4C-4689-A8D6-5A1F968CBAAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
