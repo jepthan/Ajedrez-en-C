@@ -4,8 +4,8 @@
 #include "Vec.h"
 #include "Ventana.h"
 #include "Casilla.h"
-#include "LoadFile.h"
 #include "Shader.h"
+
 int main() {
 
 	Ventana app;
