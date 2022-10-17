@@ -46,6 +46,9 @@ void initCasilla(Casilla* oCasilla, Shader oShader) {
 	oCasilla->Posicion.x = 0;
 	oCasilla->Posicion.y = 0;
 	oCasilla->oShader = oShader;
+	oCasilla->Color.x = 1.0;
+	oCasilla->Color.y = 1.0;
+	oCasilla->Color.z = 1.0;
 }
 void pintar(Casilla oCasilla, Ventana app) {
 
@@ -57,6 +60,12 @@ void pintar(Casilla oCasilla, Ventana app) {
 	AddMat4TR(oCasilla.oShader, Transfom);
 	AddMat4SC(oCasilla.oShader, scale);
 
+	UseShader(oCasilla.oShader);
+
+
+	GLuint colorID = glGetUniformLocation(oCasilla.oShader.ID, "color");
+	
+	glUniform3fv(colorID, 1, &oCasilla.Color);
 
 	UseShader(oCasilla.oShader);
 	glBindVertexArray(oCasilla.VAO);

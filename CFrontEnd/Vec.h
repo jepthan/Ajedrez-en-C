@@ -3,18 +3,19 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "Ventana.h"
+//Vector de 2 domensiones para posiciones en 2d y texture cordinates
 typedef struct Vec2 {
 	float x;
 	float y;
 	
 }Vec2;
-
+//Vector de 3 dimensiones para posiciones en 3d  y colores
 typedef struct Vec3 {
 	float x;
 	float y;
 	float z;
 }Vec3;
-
+// matrices de 4 *4 para matris de transformacion scale y projecton
 typedef struct Mat4 {
 	float matrix[4][4];
 }Mat4;

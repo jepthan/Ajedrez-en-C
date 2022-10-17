@@ -2,6 +2,7 @@
 
 void iniciarVentana(Ventana *interfaz) {
 
+	GlConfig();
 	if (!glfwInit()) {
 		printf("error al iniciar pantalla\n");
 	}
@@ -11,7 +12,11 @@ void iniciarVentana(Ventana *interfaz) {
 		printf("Error al iniciar window");
 	}
 	glfwMakeContextCurrent(interfaz->window);
-	GlConfig();
+	
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+
 	GLenum GlewInitResult = glewInit();
 	if (GLEW_OK != GlewInitResult) {
 		printf("Error al inicializar glew %s", glewGetErrorString(GlewInitResult));
@@ -39,6 +44,10 @@ void GlConfig() {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 	glfwWindowHint(GLFW_MAXIMIZED, GL_TRUE);
-	
 
+	glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, 1);
+
+	glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
+
+	
 }
