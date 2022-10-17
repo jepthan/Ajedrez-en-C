@@ -11,6 +11,6 @@ typedef struct File
 }File;
 int leerArchivo(File* Archivo);
 int HacerArchivo(File* Archivo);
-int LoadMovements(File* Archivo, Vec2 Movimientos[64]);
+int LoadMovements(File* Archivo, int Movimientos[64]);
 char *LoadShader(File* Archivo);
 unsigned int loadImage(File * Archivo);
