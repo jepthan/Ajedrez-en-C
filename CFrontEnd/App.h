@@ -18,14 +18,7 @@ Caballo oCaballo;
 
 Casilla oCasilla[64];
 
-int movimientos[64];
 
-// tiempos tiempos para retrazos y delta time
-double Time1 = 0;
-double Time2 = 0;
-double deltaTime = 0;
-
-int current = 0;
 
 void StartApp();
 

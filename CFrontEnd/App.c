@@ -1,7 +1,23 @@
 #include "App.h"
 
+
+int current = 0;
+
 void StartApp()
 {
+
+	
+
+	int movimientos[64];
+
+	// tiempos tiempos para retrazos y delta time
+	double Time1 = 0;
+	double Time2 = 0;
+	double deltaTime = 0;
+
+	
+
+
 	//Ventana app;
 	app.height = 500;
 	app.width = 500;
