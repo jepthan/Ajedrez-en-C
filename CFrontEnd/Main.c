@@ -1,8 +1,11 @@
+#include "App.h"
 
-#include <stdio.h>
 
 int main() {
 
- 
+	//inicia la aplicacion
+	StartApp();
+	
 	return 0;
 }
+
