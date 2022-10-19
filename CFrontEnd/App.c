@@ -3,8 +3,8 @@
 void StartApp()
 {
 	//Ventana app;
-	app.height = 991;
-	app.width = 1920;
+	app.height = 500;
+	app.width = 500;
 	app.Titulo = "C FrontEnd";
 	iniciarVentana(&app);
 
@@ -15,14 +15,14 @@ void StartApp()
 
 
 	//Shader oShader;
-	oShader.FragmentName = "Fragment.txt";
-	oShader.VertexName = "Vertex.txt";
+	oShader.FragmentName = (char*)"Fragment.txt";
+	oShader.VertexName = (char*)"Vertex.txt";
 	initShader(&oShader);
 
 
 	//Shader oShader_Caballo;
-	oShader_Caballo.FragmentName = "Fragment_Caballo.txt";
-	oShader_Caballo.VertexName = "Vertex.txt";
+	oShader_Caballo.FragmentName = (char*)"Fragment_Caballo.txt";
+	oShader_Caballo.VertexName = (char*)"Vertex.txt";
 	initShader(&oShader_Caballo);
 
 
@@ -33,7 +33,7 @@ void StartApp()
 
 	int conter = 0;
 	int colorcont = 0;
-	float ypos = 0.85;
+	float ypos = 0.53;
 
 	Vec3 blanco = { 0.8,0.8,0.8 };
 	Vec3 Negro = { 0.1,0.1,0.1 };
@@ -44,7 +44,7 @@ void StartApp()
 	for (int i = 0; i < 64; i++) {
 
 		initCasilla(&oCasilla[i], oShader);
-		oCasilla[i].Posicion.x = (conter * 0.125) - 0.440;
+		oCasilla[i].Posicion.x = (conter * 0.152) - 0.530;
 		oCasilla[i].Posicion.y = ypos;
 		if (i % 2 == 0) {
 			oCasilla[i].Color = temp;
@@ -55,7 +55,7 @@ void StartApp()
 		}
 		if (conter == 7) {
 			conter = -1;
-			ypos += -0.24;
+			ypos += -0.152;
 			if (colorcont % 2 == 0) {
 				temp = blanco;
 				temp2 = Negro;
@@ -102,8 +102,8 @@ void StartApp()
 		Time2 = glfwGetTime();
 
 		deltaTime = Time2 - Time1;
-		system("cls");
-		printf("%f", 1/deltaTime);
+		//system("cls");
+		//printf("%f", 1/deltaTime);
 	}
 }
 
