@@ -7,9 +7,12 @@ int movimientos[64];
 void StartApp()
 {
 
-	
-
-	
+	int col, row, pos = 0;
+	printf("Digite la Columna inicial del caballo");
+	scanf_s("%d", &col);
+	printf("Digite la Fila inicial del caballo");
+	scanf_s("%d", &row);
+	pos = 8 * (row-1) + (col-1);
 
 	// tiempos tiempos para retrazos y delta time
 	double Time1 = 0;
@@ -92,7 +95,7 @@ void StartApp()
 
 
 	//Set posicion inicial del caballo
-	oCaballo.Posicion = oCasilla[movimientos[current]].Posicion;
+	oCaballo.Posicion = oCasilla[pos].Posicion;
 
 	//swap interval 1 cambia el buffer  60 veces por segundo
 	glfwSwapInterval(1);
