@@ -20,7 +20,7 @@ int HacerArchivo(File* Archivo) {
 	}
 }
 
-int LoadMovements(File *Archivo, int Movimientos[64]) {
+int LoadMovements(File *Archivo, int *Movimientos[64]) {
 	//carga movimientos de un archivo de texto
 	int location = 0;
 	if (leerArchivo(Archivo)) {
@@ -28,6 +28,7 @@ int LoadMovements(File *Archivo, int Movimientos[64]) {
 		while (location != EOF && i<64) {
 			
 			location = fscanf_s(Archivo->Archivo, "%d", &Movimientos[i]);
+			i++;
 			
 		}
 		

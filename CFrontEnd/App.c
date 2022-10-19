@@ -2,21 +2,24 @@
 
 
 int current = 0;
+int movimientos[64];
 
 void StartApp()
 {
 
 	
 
-	int movimientos[64];
+	
 
 	// tiempos tiempos para retrazos y delta time
 	double Time1 = 0;
 	double Time2 = 0;
 	double deltaTime = 0;
 
-	
-
+	//cargar movimientos
+	File Mov;
+	Mov.filename = (char*)"hola.txt";
+	LoadMovements(&Mov, &movimientos);
 
 	//Ventana app;
 	app.height = 500;
@@ -89,7 +92,7 @@ void StartApp()
 
 
 	//Set posicion inicial del caballo
-	oCaballo.Posicion = oCasilla[current].Posicion;
+	oCaballo.Posicion = oCasilla[movimientos[current]].Posicion;
 
 	//swap interval 1 cambia el buffer  60 veces por segundo
 	glfwSwapInterval(1);
@@ -126,8 +129,8 @@ void StartApp()
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
 	if (key == GLFW_KEY_E && action == GLFW_PRESS) {
-		oCaballo.Posicion = oCasilla[current].Posicion;
-		if (current < 64) {
+		oCaballo.Posicion = oCasilla[movimientos[current]].Posicion;
+		if (current < 63) {
 			current++;
 		}
 		else {
