@@ -1,18 +1,20 @@
-﻿using System;
+﻿using CSharpFrontEnd.NewFolder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CSharpFrontEnd.Modelo
 {
-    internal class Caballo
+    internal class Caballo : Square
     {
-        Posicion oPosicion;
-        Caballo(){
+        private Bitmap imagen;
+        public Caballo(int x, int y) : base(x, y)
+        {
             
-            oPosicion = new Posicion();
-        
         }
+        
     }
 }
