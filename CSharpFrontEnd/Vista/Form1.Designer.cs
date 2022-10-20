@@ -1,4 +1,5 @@
-﻿using CSharpFrontEnd.NewFolder;
+﻿using CSharpFrontEnd.Controller;
+using CSharpFrontEnd.Vista;
 
 namespace CSharpFrontEnd
 {
@@ -8,7 +9,7 @@ namespace CSharpFrontEnd
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private Controlador controlador;
+        public Controlador controlador { get; set; }
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -28,9 +29,19 @@ namespace CSharpFrontEnd
             controlador = new Controlador();
 
             this.Paint += pictureBox1_Paint;
+            this.KeyPress += MovCaballoEvent;
             this.MaximumSize = this.Size;
             this.MinimumSize = this.Size;
             this.MaximizeBox = false;
+            controlador.moveCaballo(0, 0);
+
+
+            HorseCordinates Caballopos = new HorseCordinates(this);
+
+            Caballopos.Show();
+            
+
+
         }
 
         #region Windows Form Designer generated code
@@ -42,7 +53,6 @@ namespace CSharpFrontEnd
         private void InitializeComponent()
         {
             this.SuspendLayout();
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharpFrontEnd.Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,18 +7,20 @@ using System.Threading.Tasks;
 
 namespace CSharpFrontEnd.NewFolder
 {
-    internal class TableroTiro
+    public class TableroTiro
     {
         private String[,] matriz { get; set; }//matriz 
         private Bitmap black; //color negro
         private Bitmap white;//color blanco
-        private List<Casilllas> casilla { get; set; }
+        public List<Casilllas> casilla { get; set; }
 
+        
         public TableroTiro()
         {
             this.black = new Bitmap(80,80);
             this.white = new Bitmap(80,80);
             casilla = new List<Casilllas>();
+            
             for (int x=0; x<80; x++)
             {
                 for (int y=0; y<80; y++)
@@ -59,6 +62,7 @@ namespace CSharpFrontEnd.NewFolder
             {
                 u.Dibujar(grafics);
             }
+            
         }
     }
 }
