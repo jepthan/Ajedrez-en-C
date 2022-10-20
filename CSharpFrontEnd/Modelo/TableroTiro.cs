@@ -57,7 +57,7 @@ namespace CSharpFrontEnd.NewFolder
         {
             foreach (Casilllas u in casilla)
             {
-                u.mover(grafics);
+                u.Dibujar(grafics);
             }
         }
     }

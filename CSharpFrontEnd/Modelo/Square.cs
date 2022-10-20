@@ -23,10 +23,23 @@ namespace CSharpFrontEnd.NewFolder
             this.width = this.Imagen.Width;
             this.height = this.Imagen.Height;
         }
+        public Square(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+            this.Imagen = null;
+            this.width = 0;
+            this.height = 0;
+        }
+        public void setImagen(Bitmap img)
+        {
+            this.Imagen = img;
+            this.width = this.Imagen.Width;
+            this.height = this.Imagen.Height;
+        }
 
         public void Dibujar(Graphics graphics)
         {
-            //space = new System.Drawing.Rectangle(0, 0, this.Width, this.Height);
             graphics.DrawImage(Imagen, x, y, width, height);
         }
     }
