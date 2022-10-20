@@ -1,4 +1,6 @@
-﻿namespace CSharpFrontEnd
+﻿using CSharpFrontEnd.NewFolder;
+
+namespace CSharpFrontEnd
 {
     partial class Form1
     {
@@ -6,7 +8,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        private Controlador controlador;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -20,6 +22,17 @@
             base.Dispose(disposing);
         }
 
+        private void CustomComponents()
+        {
+            Graphics g = this.CreateGraphics();
+            controlador = new Controlador();
+
+            this.Paint += pictureBox1_Paint;
+            this.MaximumSize = this.Size;
+            this.MinimumSize = this.Size;
+            this.MaximizeBox = false;
+        }
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -28,10 +41,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(684, 681);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

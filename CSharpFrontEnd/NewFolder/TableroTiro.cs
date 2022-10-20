@@ -17,10 +17,10 @@ namespace CSharpFrontEnd.NewFolder
         {
             this.black = new Bitmap(80,80);
             this.white = new Bitmap(80,80);
-
-            for (int x=80; x<80; x++)
+            casilla = new List<Casilllas>();
+            for (int x=0; x<80; x++)
             {
-                for (int y=80; y<80; y++)
+                for (int y=0; y<80; y++)
                 {
                     this.black.SetPixel(x,y, Color.Black);
                     this.white.SetPixel(x, y, Color.White);
@@ -40,11 +40,11 @@ namespace CSharpFrontEnd.NewFolder
                 {
                     if (cont % 2 == 0)
                     {
-                        unit = new Casilllas(black.Width * j, black.Height * i, black);
+                        casilla.Add(new Casilllas((black.Width * j)+20, (black.Height * i)+20, black));
                     }
                     else
                     {
-                        unit = new Casilllas(white.Width * j, white.Height * i, white);
+                        casilla.Add(new Casilllas((white.Width * j)+20, (white.Height * i)+20, white));
                     }
                    // this.matriz[i,j] = "*";
                    // unitBoards.Add(ub);
