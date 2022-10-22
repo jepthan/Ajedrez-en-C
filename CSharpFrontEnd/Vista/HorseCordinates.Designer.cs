@@ -51,7 +51,7 @@
             this.Row.Name = "Row";
             this.Row.Size = new System.Drawing.Size(188, 23);
             this.Row.TabIndex = 1;
-            this.Row.TextChanged += new System.EventHandler(this.Row_TextChanged);
+            this.Row.KeyPress += this.Row_TextChanged;
             // 
             // Col
             // 
@@ -59,7 +59,7 @@
             this.Col.Name = "Col";
             this.Col.Size = new System.Drawing.Size(188, 23);
             this.Col.TabIndex = 2;
-            this.Col.TextChanged += new System.EventHandler(this.Col_TextChanged);
+            this.Col.KeyPress += this.Col_TextChanged;
             // 
             // label1
             // 
