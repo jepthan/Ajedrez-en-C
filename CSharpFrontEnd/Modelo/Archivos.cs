@@ -42,20 +42,36 @@ namespace CSharpFrontEnd.Modelo
         }
         public int getinput()
         {
-            fileWriter.Dispose();
-            if(fileReader == null)
+            if(fileWriter != null)
+            {
+                fileWriter.Dispose();
+            }
+            
+            if (fileReader == null)
             {
                 string fullpath = dirPath + filepath;
                 fileReader = File.OpenText(fullpath);
             }
-            Debug.WriteLine(fileReader.ReadLine());
+            string temp;
+            //si el final de el archivo no termina en una linea vacioa esto puede causar un crash
+            //por que agarra un numero erroneo al final del archivo
+            if((temp = fileReader.ReadLine()) != null)
+            {
+                //seek the biginig of file
+                fileReader.BaseStream.Seek(0, SeekOrigin.Begin);
+                return int.Parse(temp);
+            }
             
-
-            return 0;
+            //return -1 if enconters an error
+            return -1;
         }
         public void setOutput(int x, int y)
         {
-            fileReader.Dispose();
+            if(fileReader != null)
+            {
+                fileReader.Dispose();
+            }
+            
             if (fileWriter == null)
             {
                 string fullpath = dirPath + filepath;

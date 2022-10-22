@@ -1,11 +1,16 @@
-﻿namespace CSharpFrontEnd
+﻿using CSharpFrontEnd.Modelo;
+
+namespace CSharpFrontEnd
 {
     public partial class Form1 : Form
     {
         public int posx { get; set; }//pos x y y de caballo
         public int posy { get; set; }
+
+        private Archivos movimientos;
         public Form1()
         {
+            movimientos = new Archivos("input.txt");
             InitializeComponent();
             CustomComponents();
             posx = 0;
@@ -28,7 +33,10 @@
             if (e.KeyChar == 'E' || e.KeyChar == 'e')
             {
                 this.controlador.moveCaballo(posx, posy);
-                if (posx < 7)
+
+                posx = movimientos.getinput();
+                posy = movimientos.getinput();
+                /*if (posx < 7)
                 {
                     posx++;
                 }
@@ -43,7 +51,7 @@
                     {
                         posy = 0;
                     }
-                }
+                }*/
                 this.Refresh();
             }
         }
