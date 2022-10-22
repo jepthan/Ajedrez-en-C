@@ -15,7 +15,7 @@ namespace CSharpFrontEnd.Modelo
         private Bitmap imagen;
         public Caballo(int x, int y) : base(x, y)
         {
-            var tempimg = new Bitmap("C:\\Users\\jefte\\Programacion\\Paradigmas\\Proyecto\\Proyecto_Paradigmas\\CSharpFrontEnd\\Images\\Caballo.png");
+            var tempimg = new Bitmap("Images\\Caballo.png");
             
             
             //Scale Bitmap
