@@ -1,0 +1,28 @@
+﻿  App.c
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\App.c(25,34): warning C4047: 'function': 'int **' differs in levels of indirection from 'int (*)[64]'
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\App.c(25,22): warning C4024: 'LoadMovements': different types for formal and actual parameter 2
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\App.c(69,45): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\App.c(80,18): warning C4305: '+=': truncation from 'double' to 'float'
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\App.c(109,19): warning C4305: 'function': truncation from 'double' to 'GLclampf'
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\App.c(109,24): warning C4305: 'function': truncation from 'double' to 'GLclampf'
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\App.c(109,29): warning C4305: 'function': truncation from 'double' to 'GLclampf'
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\App.c(109,34): warning C4305: 'function': truncation from 'double' to 'GLclampf'
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\App.c(58,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\App.c(60,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\App.c(61,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Caballo.c
+  Casilla.c
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\Casilla.c(68,42): warning C4133: 'function': incompatible types - from 'Vec3 *' to 'const GLfloat *'
+  LoadFile.c
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\LoadFile.c(30,42): warning C4477: 'fscanf_s' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int **'
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\LoadFile.c(51,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Main.c
+  Shader.c
+  Vec.c
+  Ventana.c
+  Vertex.c
+  stb_image.c
+  Generating Code...
+  CFrontEnd.vcxproj -> E:\Programacion\Paradigmas\Proyecto_Paradigmas\x64\Debug\CFrontEnd.exe
+          1 file(s) copied.
+          1 file(s) copied.
