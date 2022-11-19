@@ -1,0 +1,5 @@
+﻿  Main.c
+E:\Programacion\Paradigmas\Proyecto_Paradigmas\CFrontEnd\Main.c(7,2): warning C4013: 'StartApp' undefined; assuming extern returning int
+  CFrontEnd.vcxproj -> E:\Programacion\Paradigmas\Proyecto_Paradigmas\x64\Debug\CFrontEnd.exe
+          1 file(s) copied.
+          1 file(s) copied.
