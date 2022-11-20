@@ -3,6 +3,8 @@
 
 (struct point (x y))
 
+(define N 7) 
+
 (define (igual p1 p2); revisa si los puntos p1 y p2 son iguales
   (if (and(=(point-x p1) (point-x p2)) (=(point-y p1) (point-y p2)))
       #t
@@ -52,7 +54,7 @@
 
 (define (check-valid p1)
   ((cond
-     [(and (and(> (point-x p1) 0)(> (point-y p1) 0)) (and(<= (point-x p1) 8)(<= (point-y p1) 8))) (#t)]
+     [(and (and(> (point-x p1) 0)(> (point-y p1) 0)) (and(<= (point-x p1) N)(<= (point-y p1) N))) (#t)]
      [else (#f)]
      )
    ));p1 checks if is incide board idkwhy
@@ -68,9 +70,9 @@
 
 (define (aumentar p)
   (cond
-    [(<(point-x p) 8) (point (+(point-x p)1) (point-y p))]
-    [(and (=(point-x p) 8) (<(point-y p) 8)) (point 1 (+(point-y p)1))]
-    [(=(point-y p)8)(point 0 0)]
+    [(<(point-x p) N) (point (+(point-x p)1) (point-y p))]
+    [(and (=(point-x p) N) (<(point-y p) N)) (point 1 (+(point-y p)1))]
+    [(=(point-y p)N)(point 0 0)]
     [else (point 0 0)]
     ))
 
@@ -88,21 +90,19 @@
     [(not(isSafe (car L1) p L1)) (agregar1 L1 (aumentar p))]
     ))
 
-(define (principal L1 p)
-  ;(printf "~S\n" (longitud L1))
+(define (principal L1 p n)
+  (printf "~S\n" n)
   
-  (if (=(longitud L1) 62)
+  (if (= n (-(* N N)1))
       L1
       (cond
-        [(ispointnull (car L1)) (principal (cddr L1) (aumentar(cadr L1)))]
-        [else (principal (cons (agregar L1 p) L1) (point 1 1))]
+        [(ispointnull (car L1)) (principal (cddr L1) (aumentar(cadr L1)) (- n 2))]
+        [else (principal (cons (agregar L1 p) L1) (point 1 1) (+ 1 n))]
     )
   )
 )
 
-(define l1 (cons(point 1 1) '()))
+(define l1 (cons(point 3 2) '()))
 ;(trace principal)
 
-(principal l1 (point 1 1))
-
-
+(principal l1 (point 1 1) 1)
