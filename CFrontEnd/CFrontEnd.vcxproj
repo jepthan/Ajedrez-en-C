@@ -24,6 +24,7 @@
     <ProjectGuid>{225f1518-9fe1-43c9-a75e-553591895a39}</ProjectGuid>
     <RootNamespace>CFrontEnd</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Ajedrez en C</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
